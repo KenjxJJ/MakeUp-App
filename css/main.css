@@ -1,17 +1,17 @@
 body{
      font-size: 1.4em;
      font-family: 'Sentinel', serif;
-     background-color:rgba(233, 231, 231, 0.342);
+     background-color:rgb(252, 252, 248);
      display: flex;
      flex-direction: column;
 }
 
-header * {
+.header * {
      margin: 0;
 }
 
-header img.logo {
-     display: block;
+.header img.logo {
+     /* display: block; */
      border: 0px;
      margin: 0;
      width: 100%;
@@ -127,44 +127,70 @@ img.displayed_image {
          border-bottom: 1px solid whitesmoke;
     }
    .header img.logo {
-        display: inline-block;
-        width: 50%;
+        width: 100%;
    }
 
 
 }
 @media all and (min-width: 600px){
+     .container {
+       padding: 0.67rem; 
+     } 
+     .header {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+     }
      .header img.logo {
-          display: none;
+          width: 42%; 
      }
-     main {
+     .landing {
           background: url('/img/img_1.jpg') no-repeat center center;
-          background-attachment: cover;
+          z-index: -1;
+          height: 60vh;
+          position: relative;
      }
-     ul {
-        margin-top:  30px;
-    }
+     .landing .text {
+          position: absolute;
+          bottom: 0.3rem;
+          color: rgb(255, 255, 255);
+          word-spacing: .3em;
+          margin-bottom: 0.56rem;
+     }
+
      li {
           border-radius: .7rem;
           display: inline;      
-          padding: 0.5rem 16px;
+          padding: 0.4rem 14px;
           margin: 10px;
      }
      
      .products{
-       flex-flow: row wrap;     
+       flex-flow: row wrap;   
+       justify-content: flex-start  
      }
      .product {     
-           width: 40%;
-           margin: 0.4em;
+           width: 44%;
+           margin: 0.6em;
      }
      .product  *{
          text-align: left;
      }
      img {
-          height: 300px;
+          max-height: 300px;
      }
 }
 
 @media all and (min-width: 800px){
+     .container {
+          max-width: 800px;
+          margin: auto;
+          box-shadow: 
+           30px 0px 40px rgba(0,0,0,0.3),
+           -30px 0px 40px rgba(0,0,0,0.3);;
+     }
+     
+     .product {
+          width:  28%;
+     }
 }
