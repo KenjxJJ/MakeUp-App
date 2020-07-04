@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale = 1.0">
+    <title>Jane's MakeUp</title>
+
+    <link href="css/main.css" rel="stylesheet" />
+
+    <style>
+        main h1 {
+            background: linear-gradient(185deg, rgb(255, 219, 253) 0%, rgba(255, 255, 255, 0.76) 10%, rgb(247, 244, 244) 80%, rgba(252, 242, 244, 0.87) 100%);
+        }
+        
+        section.stylist {
+            margin: 1.2rem auto;
+            padding: 0.45rem;
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: flex-start;
+            border-bottom: 2px solid pink;
+            background: linear-gradient(135deg, rgb(253, 148, 248) 0%, rgba(255, 255, 255, 0.76) 10%, rgb(247, 244, 244) 80%, rgba(243, 143, 160, 0.87) 100%);
+            box-shadow: 2px 5px 15px rgba(177, 173, 173, 0.856);
+        }
+        
+        section * {
+            flex: 1 1 100%;
+        }
+        
+        section header {
+            font-size: 1.6rem;
+        }
+        
+        header .team_member {
+            width: 55%;
+            border-radius: 50%;
+            background: rgba(136, 239, 231, 0.3);
+            box-shadow: 0px 15px 30px rgba(199, 161, 201, 0.623);
+        }
+        
+        header h2 {
+            margin: 0;
+        }
+        
+        .main .description {
+            min-height: 0vh;
+            font-size: 1.1rem;
+        }
+        
+        @media screen and ( min-width: 636px) {
+            section.stylist {
+                flex-flow: row wrap;
+            }
+            section * {
+                flex: 50%;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <header class="header">
+            <a class="closebtn">&times;</a>
+            <nav>
+                <ul>
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="/services.html">Services</a></li>
+                    <li><a href="/contactUs.html">Contact Us</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <img class="logo" src="img/logo.jpg">
+        <div id="myHamburger">
+            <span id="lines"></span>
+            <span id="lines"></span>
+            <span id="lines"></span>
+        </div>
+        <main class="main">
+            <h1> Meet our Sylists. </h1>
+            <div class="team_list"></div>
+        </main>
+        <footer class="footer">
+            &copy;2020 Jane's MakeUp Ltd. | All rights reserved.
+            <p>Developed by
+                <a href="https://www.github.com/KenjxJJ">KenjxJJ</a
+           > </p>
+        </footer>
+    </div>
+
+    <script>
+        const stylists = [{
+            "name": "Jane",
+            "photo": "/img/img_11.jpeg",
+            "position": "Owner / Lead",
+            "description": `A kind young woman with passion to deliver quality places of beautiful and elegant ladies makeup. Her vision for her customers to search their favourite products with ease.`
+        }, {
+            "name": "Kacy",
+            "photo": "/img/img_12.jpeg",
+            "position": "Assistant Lead",
+            "description": `A market-oriented person who inspires the rest of the team to deliver world-class products. We make a good fortune because of her.  `
+        }, {
+            "name": "Florence",
+            "photo": "/img/img_13.jpeg",
+            "position": "Skin Chemist",
+            "description": `An expert with a degree of cosmetics science, with the lady's heart to 
+                 to look out for the skin enhacements with appropiate ingredients through constant research and network.`
+        }, {
+            "name": "Daisy",
+            "photo": "/img/img_14.jpeg",
+            "position": "Skin Chemist",
+            "description": `Her experience with make-up usage for 8 years makes our team to be a top-class site for skin products queries. Don't fear asking her via twitter. `
+        }];
+
+        let displayTeamMembers = document.querySelector('.team_list');
+
+        function displayPersons(list) {
+            displayTeamMembers.innerHTML += ` <section class="stylist">
+            <header> 
+                <img class="team_member" src=${list.photo} alt=""/>
+                <h2> ${list.name}</h2>
+            </header>
+        <main class="main description">
+        <p> ${list.position}</p>
+        <p> ${list.description}</p>
+        </main>
+                    </section>`
+        }
+
+        for (let member of stylists) {
+            displayPersons(member);
+        }
+    </script>
+    <script src="js/app.js" async></script>
+</body>
+
+</html>
