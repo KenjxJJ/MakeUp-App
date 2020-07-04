@@ -1,5 +1,5 @@
 body {
-    font-size: 1.4em;
+    font-size: 1.2rem;
     font-family: 'Sentinel', serif;
     background-color: rgba(253, 252, 252, 0.918);
     display: flex;
@@ -161,11 +161,46 @@ img.displayed_image {
 }
 
 .footer {
-    font-size: small;
     padding: 1.4rem;
-    background-color: pink;
-    height: 2rem;
+    background-color: #f9c;
+    line-height: 1.3rem;
     text-align: center;
+    font-size: 0.61rem;
+    letter-spacing: 2px;
+}
+
+
+/* //ContactUs Page */
+
+main h1,
+main p {
+    padding: 0.2rem 0;
+}
+
+main h1.feedback_heading {
+    color: #ff5588;
+}
+
+hr {
+    width: 70%;
+    color: #000;
+}
+
+.social_links_section {
+    padding: 2.3rem 3rem;
+    background-color: #fbe;
+    border-top-right-radius: 28px;
+    border-top-left-radius: 28px;
+}
+
+.social_links_section i {
+    color: #f58;
+}
+
+.social_links_section p {
+    font-size: 0.91rem;
+    padding: 0 0 1.3rem 0;
+    font-weight: 400;
 }
 
 @media all and (max-width:320px) {
@@ -182,6 +217,17 @@ img.displayed_image {
     }
 }
 
+@media all and (min-width: 450px) {
+    .social_links_section {
+        display: flex;
+        justify-content: flex-start;
+    }
+    .social_links_section>* {
+        flex: 1 1 33%;
+        padding: 0 0.3rem;
+    }
+}
+
 @media all and (min-width: 600px) {
     .container {
         padding: 0.67rem;
@@ -194,14 +240,15 @@ img.displayed_image {
     .header {
         position: absolute;
         width: 60%;
-        top: 1.2rem;
         left: 0.3rem;
         padding: 1.8rem 3.5rem 0;
         height: 30px;
         overflow: hidden;
         background-color: rgb(252, 252, 248);
+        transition: none;
     }
     .header * {
+        transition: none;
         display: inline;
         font-size: 20px;
     }
@@ -246,7 +293,9 @@ img.displayed_image {
     .container {
         max-width: 800px;
         margin: auto;
-        box-shadow: 30px 0px 40px rgba(0, 0, 0, 0.3), -30px 0px 40px rgba(0, 0, 0, 0.3);
-        ;
+        box-shadow: 20px 0px 30px rgba(212, 212, 212, 0.3), -20px 0px 30px rgba(212, 212, 212, 0.3);
+    }
+    .social_links_section {
+        min-width: 500px;
     }
 }
