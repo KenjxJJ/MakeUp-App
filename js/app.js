@@ -35,9 +35,7 @@ document.getElementById('myHamburger').addEventListener('click', openNav, true);
 document.querySelector('.closebtn').addEventListener('click', closeNav, false);
 
 function openNav() {
-    document.querySelector('.header').style.width = "55%";
-    // document.querySelector(".main").style.marginLeft = "250px";
-    //   For opacity choice
+    document.querySelector('.header').style.width = "45%";
     document.body.style.backgroundColor = " rgba(252, 252, 248, 0.6);";
 }
 
