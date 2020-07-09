@@ -32,12 +32,12 @@ fetchProducts();
 document.getElementById('myHamburger').addEventListener('click', openNav, true);
 document.querySelector('.closebtn').addEventListener('click', closeNav, false);
 
-const openNav = () => {
+function openNav() {
     document.querySelector('.header').style.width = "45%";
     document.body.style.backgroundColor = " rgba(252, 252, 248, 0.6);";
 }
 
-const closeNav = () => {
+function closeNav() {
     document.querySelector(".header").style.width = "0";
     document.querySelector(".main").style.marginLeft = "0";
     // For opacity choice
