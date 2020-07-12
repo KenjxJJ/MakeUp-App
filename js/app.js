@@ -33,15 +33,15 @@ document.getElementById('myHamburger').addEventListener('click', openNav, true);
 document.querySelector('.closebtn').addEventListener('click', closeNav, false);
 
 function openNav() {
-    document.querySelector('.header').style.width = "45%";
-    document.body.style.backgroundColor = " rgba(252, 252, 248, 0.6);";
+    document.querySelector('.header').classList.add('revealFromLeft');
+    document.body.classList.add('shiftRight');
 }
 
 function closeNav() {
-    document.querySelector(".header").style.width = "0";
-    document.querySelector(".main").style.marginLeft = "0";
+    document.querySelector(".header").classList.remove('revealFromLeft');
     // For opacity choice
-    document.body.style.backgroundColor = "white";
+    document.body.classList.remove('shiftRight');
+    document.body.classList.add('shiftLeft');
 }
 
 // lazy load images
