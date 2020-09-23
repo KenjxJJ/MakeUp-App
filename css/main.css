@@ -1,11 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Belleza&family=Open+Sans&display=swap');
+.container {
+    overflow-x: hidden;
+}
+
+main,
+.footer {
+    margin-left: -12px;
+    margin-right: -12px;
+}
+
 body {
-    font-size: 1.2rem;
-    font-family: 'Sentinel', serif;
+    font-size: 1.1rem;
+    font-family: 'Belleza', sans-serif;
     background-color: rgba(253, 252, 252, 0.918);
     display: flex;
     flex-direction: column;
-    min-width: 290px;
-    overflow-x: hidden;
+    min-width: 235px;
 }
 
 .header {
@@ -38,7 +48,7 @@ ul {
     text-align: center;
     flex: 1 0 100%;
     padding: 0;
-    font-family: 'Tw Cen MT Condensed', ' Arial Narrow', 'Arial', sans-serif;
+    font-family: 'Belleza', sans-serif;
 }
 
 li {
@@ -122,7 +132,7 @@ img.logo {
 
 main {
     text-align: center;
-    min-height: 65vh;
+    font-family: 'Open Sans', Arial, sans-serif;
 }
 
 main header {
@@ -143,6 +153,9 @@ main p {
     flex-flow: column wrap;
     justify-content: center;
     align-items: center;
+    transition: all .5s ease-in;
+    min-height: 40vh;
+    padding: 0.5rem;
 }
 
 .product {
@@ -152,19 +165,20 @@ main p {
     display: flex;
     flex-flow: row wrap;
     justify-content: left;
-    background-color: rgb(250, 236, 218);
+    background-color: rgba(248, 235, 218, 0.829);
     padding: 0.2em;
 }
 
 .product>* {
     flex: 1 1 100%;
-    color: rgba(44, 44, 44, 0.89);
-    font-size: 1.2rem;
+    color: rgba(36, 36, 36, 0.89);
+    font-size: 1.02rem;
     text-align: left;
 }
 
 .product>.about_product {
     margin-top: 8px;
+    padding: 0rem 0.4rem;
 }
 
 .about_product a {
@@ -174,15 +188,14 @@ main p {
 
 img.displayed_image {
     width: 100%;
-    border: 2px solid whitesmoke;
+    height: 370px;
 }
 
 .footer {
-    padding: 1.4rem;
+    padding: 2.1rem 1.4rem 1.4rem;
     background-color: #f9c;
-    line-height: 1.3rem;
     text-align: center;
-    font-size: 0.61rem;
+    font-size: 0.71rem;
     letter-spacing: 2px;
 }
 
@@ -196,16 +209,11 @@ img.displayed_image {
 }
 
 .up-button a {
-    color: pink;
+    color: #ff5588;
 }
 
 
 /* //ContactUs Page */
-
-main h1,
-main p {
-    padding: 0.2rem 0;
-}
 
 main h1.feedback_heading {
     color: #ff5588;
@@ -236,7 +244,6 @@ hr {
 @media all and (max-width:320px) {
     .product {
         justify-content: center;
-        align-items: center;
     }
 }
 
@@ -267,11 +274,15 @@ hr {
         margin: 3.5rem auto 0;
         display: block;
     }
+    .footer {
+        position: unset !important;
+    }
 }
 
 @media all and (min-width: 550px) {
     .container {
-        padding: 0.67rem;
+        width: 100vw;
+        padding: 0.67rem 0.67rem 0;
         position: relative;
     }
     #myHamburger,
@@ -280,9 +291,10 @@ hr {
     }
     .header {
         position: absolute;
-        width: 50%;
-        left: 0.3rem;
-        padding: 1.8rem 3.5rem 0;
+        width: 55%;
+        top: 0rem;
+        left: 0rem;
+        padding: 1.2rem 1rem 0 1rem;
         height: 30px;
         overflow: hidden;
         background-color: rgb(252, 252, 248);
@@ -291,11 +303,16 @@ hr {
     .header * {
         transition: none;
         display: inline;
-        font-size: 20px;
+        font-size: 1rem;
     }
     .header ul li {
         background: none;
-        font-size: 1.5rem;
+        font-size: 0.9rem;
+    }
+    ul li a:hover,
+    ul li a:focus {
+        background-color: #f37;
+        padding: .3rem .75rem;
     }
     .header ul li:nth-child(2) {
         padding: 0 1rem;
@@ -313,8 +330,9 @@ hr {
     }
     .landing {
         background: url('/img/img_1.jpg') no-repeat center center;
+        width: 100%;
         z-index: -1;
-        height: 60vh;
+        min-height: 450px;
         position: relative;
     }
     .landing .text {
@@ -330,21 +348,27 @@ hr {
     }
     .product {
         width: 28%;
-        margin: 0.6em;
+        height: 378px;
     }
     .product * {
         text-align: left;
     }
-    img {
-        max-height: 300px;
+    img.displayed_image {
+        height: 270px;
+    }
+}
+
+@media all and(min-width:780px) {
+    .product {
+        margin: 1.2rem;
     }
 }
 
 @media all and (min-width: 800px) {
     .container {
         max-width: 800px;
-        margin: auto;
-        box-shadow: 20px 0px 30px rgba(212, 212, 212, 0.3), -20px 0px 30px rgba(212, 212, 212, 0.3);
+        margin: 0 auto;
+        box-shadow: 20px 0px 30px rgba(66, 66, 66, 0.171), -20px 0px 30px rgba(65, 65, 65, 0.199);
     }
     .social_links_section {
         min-width: 500px;
