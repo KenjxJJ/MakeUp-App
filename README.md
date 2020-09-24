@@ -22,10 +22,7 @@ This MakeUp App is made to consume an makeup site API basically.
 Addition elements added to the site is Responsive Design(Mobile-First).
 
 ## Screenshots
-
-![Screenshot 1](img\screenshots\screenshot1.png "Home Page")
-![Screenshot 2](img\screenshots\screenshot2.png "Services Page with open Header section")
-![Screenshot 3](img\screenshots\screenshot3.png "Contact Us Page")
+No provided currently.
 
 ## Technologies
 
