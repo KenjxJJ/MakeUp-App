@@ -1,34 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale = 1.0">
     <title>Jane's MakeUp</title>
 
     <link href="css/main.css" rel="stylesheet" />
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
-<body>
-    
-    <header class="header">
-        <img class="logo" src="/img/img_header.jpg"> 
-        <nav >
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Contact Us</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main class="main">
-     <header>Welcome</header>
-            <p>This classy site is filled with all sorts of markup products to suit your taste. Pick for your favourite now.</p>
-    
-        <div class="products">
-           </div>
-    </main>
-    <footer class="footer"></footer>
 
-    <script src="js/app.js" async></script>
+<body>
+    <div class="container">
+        <header class="header">
+            <a class="closebtn">&times;</a>
+            <nav>
+                <ul>
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="/services.html">Services</a></li>
+                    <li><a href="/contactUs.html">Contact Us</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <img class="logo" src="img/logo.jpg">
+        <div id="myHamburger">
+            <span id="lines"></span>
+
+        </div>
+        <div class="social_links">
+            <a href="#"> <i class="fa fa-twitter" aria-hidden="true "></i></a>
+            <a><i class="fa fa-instagram" aria-hidden="true "></i></a>
+            <a> <i class="fa fa-facebook-official" aria-hidden="true "></i> </a>
+        </div>
+        <main class="main" id="top">
+            <div class="landing">
+                <div class="text">
+                    <header>Welcome</header>
+                    <p>This classy site is filled with all sorts of markup products to suit your taste. Pick for your favourite now.</p>
+                </div>
+            </div>
+
+            <div class="products">
+            </div>
+
+            <div class="up-button">
+                <a class="btn" href="#top">
+                    <i class="fa fa-arrow-circle-up fa-2x"></i>
+                </a>
+            </div>
+        </main>
+        <footer class="footer">
+            &copy;2020 Jane's MakeUp Ltd. | All rights reserved.
+            <p>Developed by
+                <a href="https://www.github.com/KenjxJJ">KenjxJJ</a> </p>
+        </footer>
+    </div>
+    <script src="js/app.js"></script>
 </body>
+
 </html>
